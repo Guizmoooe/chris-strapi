@@ -11,6 +11,7 @@
   },
   "devDependencies": {},
   "dependencies": {
+    "graphql": "^15.5.0",
     "knex": "0.21.18",
     "sqlite3": "5.0.0",
     "strapi": "3.5.4",
@@ -19,10 +20,12 @@
     "strapi-connector-mongoose": "^3.5.4",
     "strapi-plugin-content-manager": "3.5.4",
     "strapi-plugin-content-type-builder": "3.5.4",
+    "strapi-plugin-documentation": "3.5.4",
     "strapi-plugin-email": "3.5.4",
     "strapi-plugin-graphql": "3.5.4",
     "strapi-plugin-upload": "3.5.4",
     "strapi-plugin-users-permissions": "3.5.4",
+    "strapi-provider-upload-cloudinary": "^3.5.4",
     "strapi-utils": "3.5.4"
   },
   "author": {
