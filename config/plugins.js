@@ -10,12 +10,16 @@ module.exports = ({ env }) => ({
   email: {
     provider: "nodemailer",
     providerOptions: {
-      host: env("SMTP_HOST", "guizforlife@hotmail.fr"),
-      port: env("SMTP_PORT", 587),
-      secure: env("SECURE_SMTP", false),
+      host: env("SMTP_HOST", "smtp-mail.outlook.com"),
+      port: env("SMTP_PORT", 465),
+      secure: env("SECURE_SMTP", true),
       auth: {
         user: env("SMTP_USERNAME"),
         pass: env("SMTP_PASSWORD"),
+      },
+      tls: {
+        // do not fail on invalid certs
+        rejectUnauthorized: false,
       },
       // ... any custom nodemailer options
     },
