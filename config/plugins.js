@@ -14,14 +14,12 @@ module.exports = ({ env }) => ({
       port: 587,
       secure: false,
       auth: {
-        user: "guizforlife@hotmail.fr",
-        pass: "LilyJuliette20102013",
+        user: env("SMTP_USERNAME"),
+        pass: env("SMTP_PASSWORD"),
       },
       domains: ["hotmail.com", "outlook.com", "hotmail.fr", "live.fr"],
       tls: { ciphers: "SSLv3", rejectUnauthorized: false },
       // ... any custom nodemailer options
-      debug: true,
-      logger: true,
     },
   },
 });
