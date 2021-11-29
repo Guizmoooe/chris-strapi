@@ -10,9 +10,9 @@ module.exports = ({ env }) => ({
   email: {
     provider: 'nodemailer',
     providerOptions: {
-      host: env('SMTP_HOST', 'example@hotmail.fr'),
+      host: env('SMTP_HOST', 'guizforlife@hotmail.fr'),
       port: env('SMTP_PORT', 587),
-      secure: false,
+      secure: env('SECURE_SMTP',false),
       auth: {
         user: env('SMTP_USERNAME'),
         pass: env('SMTP_PASSWORD'),
