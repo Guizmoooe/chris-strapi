@@ -6,11 +6,10 @@
 
 module.exports = {
   sendEmail: async (ctx) => {
-    const env = require("dotenv").config();
     const body = ctx.request.body.variables;
     await strapi.plugins["email"].services.email.send({
-      to: env.parsed.SMTP_USERNAME,
-      from: env.parsed.SMTP_USERNAME,
+      to: process.env.SMTP_USERNAME,
+      from: process.env.SMTP_USERNAME,
       subject: "Nouvelle prise de contact",
       html: `<div style="text-align:left">
       <div style="border-bottom: 1px solid red; display: flex; justify-content: space-around; margin: 20px 0 ">

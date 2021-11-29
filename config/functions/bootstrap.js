@@ -9,5 +9,5 @@
  *
  * See more details here: https://strapi.io/documentation/developer-docs/latest/setup-deployment-guides/configurations.html#bootstrap
  */
-
+ require('dotenv').config({ path: require('find-config')('.env') });
 module.exports = () => {};

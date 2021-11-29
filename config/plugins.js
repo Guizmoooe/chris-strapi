@@ -8,20 +8,20 @@ module.exports = ({ env }) => ({
     },
   },
   email: {
-    provider: 'nodemailer',
+    provider: "nodemailer",
     providerOptions: {
-      host: env('SMTP_HOST', 'guizforlife@hotmail.fr'),
-      port: env('SMTP_PORT', 587),
-      secure: env('SECURE_SMTP',false),
+      host: env("SMTP_HOST", "guizforlife@hotmail.fr"),
+      port: env("SMTP_PORT", 587),
+      secure: env("SECURE_SMTP", false),
       auth: {
-        user: env('SMTP_USERNAME'),
-        pass: env('SMTP_PASSWORD'),
+        user: env("SMTP_USERNAME"),
+        pass: env("SMTP_PASSWORD"),
       },
       // ... any custom nodemailer options
     },
     settings: {
-      defaultFrom: env('SMTP_USERNAME'),
-      defaultReplyTo: env('SMTP_USERNAME'),
+      defaultFrom: env("SMTP_USERNAME"),
+      defaultReplyTo: env("SMTP_USERNAME"),
     },
   },
 });

@@ -12,6 +12,7 @@
   "devDependencies": {},
   "dependencies": {
     "dotenv": "^10.0.0",
+    "find-config": "^1.0.0",
     "graphql": "^15.5.0",
     "knex": "0.21.18",
     "sqlite3": "5.0.0",
